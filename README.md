@@ -1,68 +1,53 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Hooks
 
-## Available Scripts
+---
+## LGs:
+- [ ] Understand how react hooks are used to declare and update state
 
-In the project directory, you can run:
+---
+### Understand how react hooks are used to declare and update state
+* **Why Hooks?**
+    * Problem: Which type of component to use? Class vs Functional
+    * Solution: Hooks allow you to use local state and other React features without writing a class component
+    
+* **What is a Hook?**
+    * Hooks are functions that let you “hook into” React state and lifecycle features from function components.
+    * react v16.8.0
+    * to hook react class functionality to a functional component
 
-### `npm start`
+* **Current components tree:**
+```react
+    <App />
+        <Counter />
+```
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* **Deliverable:** Convert `Counter` class component to functional component having same functionality using hooks.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* **useState:**
+    * Returns a stateful value, and a function to update it.
+    * import`useState `
+    * declare:
+    ```react
+        const [count, setCount] = useState(0);
+    ```
+    * Array destructuring
+    * display:
+    ```react
+        count
+    ```
+    * update:
+    ```react
+        setCount(count+1)
+    ``` 
+    * Multiple state variables:
+    ```react
+        const [num, changeNum] = useState(10);
+    ```
+    
+### Extra reading:
+* [Hooks at a Glance](https://reactjs.org/docs/hooks-overview.html)
+* [React Hooks for beginners](https://www.valentinog.com/blog/hooks/) 
+* [Benefits of React Hooks](https://www.darrenlester.com/blog/benefits-of-react-hooks)
+* [Why React Hooks?](https://hackernoon.com/why-react-hooks-a-developers-perspective-2aedb8511f38)
+* [The hooks of react router](https://css-tricks.com/the-hooks-of-react-router/)
+* [Lifecycle with hooks](https://dev.to/trentyang/replace-lifecycle-with-hooks-in-react-3d4n)
