@@ -1,16 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 function Task(){
 
+    const [amount, changeAmount] = useState(100)
 
     return(  
     <div>
         <h4>
-            Current amount: {}
+            Current amount: {amount}
         </h4>
         <button 
         className="ui teal button" 
-        onClick={() => console.log("deduct 5 from the amount")}>
+        onClick={() => changeAmount( amount - 5 )}>
             Spend
         </button>
     </div>)

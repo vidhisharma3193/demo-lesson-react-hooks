@@ -9,8 +9,7 @@ function App() {
   return (
         <div>
             <Counter />
-            
-            {/* <Task /> */}
+            <Task />
         </div>
   );
 }
