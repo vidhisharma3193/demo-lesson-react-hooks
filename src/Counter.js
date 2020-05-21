@@ -1,10 +1,33 @@
 import React from 'react';
 
-function Counter(){
+class Counter extends React.Component{
 
-    return(<div>
-        Something...
-    </div>)
+    constructor(){
+        super()
+        this.state = {
+            count: 0
+        }
+    }
+
+    incrementCounter = () => {
+        this.setState({
+            count: this.state.count + 1
+        })
+    }
+
+    render(){
+        return(
+        <div>
+            <h4>
+                Current Count: {this.state.count}
+            </h4>
+            <button 
+            className="ui teal button" 
+            onClick={() => this.incrementCounter()} >
+                Increment Counter
+            </button>
+        </div>)
+    }
 
 }
 
