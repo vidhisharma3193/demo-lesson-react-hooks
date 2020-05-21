@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Counter extends React.Component{
+export default class Counter extends React.Component{
 
     constructor(){
         super()
@@ -31,4 +31,23 @@ class Counter extends React.Component{
 
 }
 
-export default Counter
+
+
+
+// function Counter(){
+
+
+//     return(
+//         <div>
+//             <h4>
+//                 Current Count: {}
+//             </h4>
+//             <button 
+//             className="ui teal button" 
+//             onClick={() => console.log("Change count")} >
+//                 Increment Counter
+//             </button>
+//         </div>)
+// }
+
+// export default Counter
